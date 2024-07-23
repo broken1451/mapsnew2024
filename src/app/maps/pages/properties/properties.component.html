@@ -1,0 +1,28 @@
+<div class="row mt-3">
+    <div class="col-2"></div>
+    <div class="col">
+        Listado de proiedades
+        <hr>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col">
+        <div class="row">
+            <!-- houses -->
+            @for (item of houses; track item.title) {
+                <div class="col-4 mb-2">
+                    <div class="card">
+                        <app-mini-map [lngLat]="item.lngLat" />
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.title}}</h5>
+                            <p class="card-text">{{item.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            }
+            <!-- houses -->
+        </div>
+    </div>
+</div>
