@@ -1,0 +1,15 @@
+<div id="map" #map></div>
+
+
+<ul class="list-group">
+
+    @for (marker of marker; track marker; let idx = $index) {
+    <li [ngStyle]="{ 'background-color':marker.color }" class="list-group-item" (dblclick)="deleteMarker(idx)"
+        (click)="goMarker(marker.marker)" onKeyPress="" onKeyDown="" onKeyUp="">
+        Marker {{ idx + 1 }}
+    </li>
+    }
+</ul>
+
+
+<button class="btn btn-primary" (click)="createMarker()">+ Agregar marcador</button>
