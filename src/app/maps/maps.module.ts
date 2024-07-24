@@ -6,8 +6,6 @@ import { MapsComponent } from './maps.component';
 
 @NgModule({
   declarations: [
-    
-  
     MapsComponent
   ],
   imports: [
